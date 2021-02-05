@@ -1,0 +1,7 @@
+---
+
+# from galaxy
+- name: gantsign.maven
+- name: grzegorznowak.nvm_node
+- name: lean_delivery.solr_standalone
+- name: zaxos.tomcat-ansible-role

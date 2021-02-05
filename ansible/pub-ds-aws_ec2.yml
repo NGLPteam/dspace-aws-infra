@@ -1,0 +1,25 @@
+#pub-ds-aws_ec2.yml
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-west-2
+filters:
+  # All instances with their `Environment` tag set to `dev`
+  tag:Environment: dev
+  tag:Project: dspace
+hostnames:
+  - tag:Name
+  # - tag:Name=pub-ds-api,Name=pub-ds-client
+  - tag:CustomDNSName
+  - dns-name
+  - private-ip-address
+keyed_groups:
+    - prefix: project
+      key: tags['Project']
+    - prefix: arch
+      key: 'architecture'
+    # Add hosts to e.g. instance_type_z3_tiny
+    - prefix: instance_type
+      key: instance_type
+compose:
+  # set the ansible_host variable to connect with the public IP address without changing the hostname
+  ansible_host: public_ip_address

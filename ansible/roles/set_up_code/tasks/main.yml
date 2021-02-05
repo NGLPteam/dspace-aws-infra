@@ -1,0 +1,12 @@
+---
+
+- name: install git
+  yum:
+    name:
+      - git
+    state: latest
+
+- name: Clone the specified code repository
+  git: repo={{ code_git_repo }} dest={{ code_source_dir }} version={{ code_git_branch }} accept_hostkey=true
+  become: yes
+  become_user: "{{ code_service_user }}"

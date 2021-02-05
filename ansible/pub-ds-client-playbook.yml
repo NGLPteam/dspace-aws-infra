@@ -1,0 +1,23 @@
+---
+
+  - name: install packages and roles for the client server of Escholarship's DSpace 7 Pilot
+    hosts: pub-ds-client
+    become: yes
+    become_user: root
+
+    vars:
+      nvm_node_version: "10.23.0"
+      nvm_install_globally:
+        - name: yarn
+          version: 1.22.5
+
+    tasks:
+      - name: latest version of all required packages installed
+        yum:
+          name:
+            - git
+          state: latest
+
+    roles:
+    - role: grzegorznowak.nvm_node
+

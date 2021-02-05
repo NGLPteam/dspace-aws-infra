@@ -1,0 +1,21 @@
+---
+- name: "create the solr directory"
+  file:
+    path: /home/eschol/solr
+    state: directory
+    mode: 0755
+    group: eschol
+    owner: eschol
+
+- name: copy the solr installer
+  copy:
+    src: files/solr-8.6.3.tgz
+    dest: /home/eschol/solr/solr-8.6.3.tgz
+    checksum: d7f819be09fe2bdc21564ea64e153dfbfba77055
+
+- name: expand the solr archive
+  unarchive:
+    src: /home/eschol/solr/solr-8.6.3.tgz
+    dest: /home/eschol/solr
+    remote_src: yes
+

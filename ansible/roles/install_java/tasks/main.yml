@@ -1,0 +1,16 @@
+---
+
+- name: uninstall Java 8
+  yum: name=java-1.8.0-openjdk state=absent
+
+- name: uninstall Java 8-headless
+  yum: name=java-1.8.0-openjdk-headless state=absent
+
+- name: Enable Java 11 via Amazon Linux Extras
+  command: amazon-linux-extras enable java-openjdk11
+
+- name: Install Java 11
+  yum: name=java-11-openjdk-devel state=present update_cache=true
+
+- name: set Java 11 as our default
+  command: alternatives --set java /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/java

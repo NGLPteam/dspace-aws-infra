@@ -1,0 +1,627 @@
+2021/02/05 15:00:47 [INFO] Terraform version: 0.13.5  
+2021/02/05 15:00:47 [INFO] Go runtime version: go1.14.10
+2021/02/05 15:00:47 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy"}
+2021/02/05 15:00:47 [DEBUG] Attempting to open CLI config file: /Users/hpotting/.terraformrc
+2021/02/05 15:00:47 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/02/05 15:00:47 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/02/05 15:00:47 [DEBUG] ignoring non-existing provider search directory /Users/hpotting/.terraform.d/plugins
+2021/02/05 15:00:47 [DEBUG] ignoring non-existing provider search directory /Users/hpotting/Library/Application Support/io.terraform/plugins
+2021/02/05 15:00:47 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2021/02/05 15:00:47 [INFO] CLI command args: []string{"destroy"}
+2021/02/05 15:00:47 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021/02/05 15:00:47 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021/02/05 15:00:47 [DEBUG] New state was assigned lineage "121952d6-3645-9faa-80d4-ccb14d2c2774"
+2021/02/05 15:00:47 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021/02/05 15:00:47 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021/02/05 15:00:47 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2021/02/05 15:00:47 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2021/02/05 15:00:47 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.20.0 for darwin_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64
+2021/02/05 15:00:47 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.20.0
+2021/02/05 15:00:48 [DEBUG] checking for provisioner in "."
+2021/02/05 15:00:48 [DEBUG] checking for provisioner in "/usr/local/bin"
+2021/02/05 15:00:48 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2021/02/05 15:00:48 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021/02/05 15:00:48 [INFO] backend/local: starting Apply operation
+2021/02/05 15:00:48 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/02/05 15:00:48 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021/02/05 15:00:48 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: existing snapshot has lineage "ea195d44-1c15-a4f3-97fd-16df30cc5eab" serial 138
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021/02/05 15:00:48 [TRACE] backend/local: reading remote state for workspace "default"
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/02/05 15:00:48 [TRACE] statemgr.Filesystem: read snapshot with lineage "ea195d44-1c15-a4f3-97fd-16df30cc5eab" serial 138
+2021/02/05 15:00:48 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/02/05 15:00:48 [TRACE] backend/local: building context for current working directory
+2021/02/05 15:00:48 [TRACE] terraform.NewContext: starting
+2021/02/05 15:00:48 [TRACE] terraform.NewContext: loading provider schemas
+2021/02/05 15:00:48 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2021-02-05T15:00:48.446-0600 [INFO]  plugin: configuring client automatic mTLS
+2021-02-05T15:00:48.478-0600 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5]
+2021-02-05T15:00:48.488-0600 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71516
+2021-02-05T15:00:48.488-0600 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5
+2021-02-05T15:00:48.527-0600 [INFO]  plugin.terraform-provider-aws_v3.20.0_x5: configuring server automatic mTLS: timestamp=2021-02-05T15:00:48.526-0600
+2021-02-05T15:00:48.558-0600 [DEBUG] plugin: using plugin: version=5
+2021-02-05T15:00:48.558-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: plugin address: address=/var/folders/g0/0bn56q_j4wbbq0j7ppz24pw1w01fmm/T/plugin294713611 network=unix timestamp=2021-02-05T15:00:48.558-0600
+2021/02/05 15:00:48 [TRACE] GRPCProvider: GetSchema
+2021-02-05T15:00:48.610-0600 [TRACE] plugin.stdio: waiting for stdio data
+2021/02/05 15:00:48 [TRACE] GRPCProvider: Close
+2021-02-05T15:00:48.671-0600 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-02-05T15:00:48.673-0600 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71516
+2021-02-05T15:00:48.673-0600 [DEBUG] plugin: plugin exited
+2021/02/05 15:00:48 [TRACE] terraform.NewContext: complete
+2021/02/05 15:00:48 [TRACE] backend/local: finished building terraform.Context
+2021/02/05 15:00:48 [TRACE] backend/local: requesting interactive input, if necessary
+2021/02/05 15:00:48 [TRACE] Context.Input: Prompting for provider arguments
+2021/02/05 15:00:48 [TRACE] Context.Input: Provider provider.aws declared at pub-dspace.tf:1,1-15
+2021/02/05 15:00:48 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2021/02/05 15:00:48 [TRACE] backend/local: running validation operation
+2021/02/05 15:00:48 [INFO] terraform: building graph: GraphTypeValidate
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/02/05 15:00:48 [TRACE] ConfigTransformer: Starting for path: 
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/02/05 15:00:48 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/05 15:00:48 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.pub-ds-api-dev" (*terraform.NodeValidatableResource) config from pub-dspace.tf:6,1-41
+2021/02/05 15:00:48 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.pub-ds-api-dev
+2021/02/05 15:00:48 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.pub-ds-client-dev" (*terraform.NodeValidatableResource) config from pub-dspace.tf:18,1-44
+2021/02/05 15:00:48 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.pub-ds-client-dev
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/05 15:00:48 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from pub-dspace.tf:1,1-15
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/05 15:00:48 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.pub-ds-client-dev
+2021/02/05 15:00:48 [DEBUG] ProviderTransformer: "aws_instance.pub-ds-client-dev" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.pub-ds-api-dev
+2021/02/05 15:00:48 [DEBUG] ProviderTransformer: "aws_instance.pub-ds-api-dev" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/02/05 15:00:48 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.pub-ds-api-dev
+2021/02/05 15:00:48 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.pub-ds-client-dev
+2021/02/05 15:00:48 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/02/05 15:00:48 [DEBUG] ReferenceTransformer: "aws_instance.pub-ds-api-dev" references: []
+2021/02/05 15:00:48 [DEBUG] ReferenceTransformer: "aws_instance.pub-ds-client-dev" references: []
+2021/02/05 15:00:48 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.pub-ds-api-dev - *terraform.NodeValidatableResource
+    aws_instance.pub-ds-client-dev - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/05 15:00:48 [DEBUG] Starting graph walk: walkValidate
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalInitProvider
+2021-02-05T15:00:48.680-0600 [INFO]  plugin: configuring client automatic mTLS
+2021-02-05T15:00:48.704-0600 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5]
+2021-02-05T15:00:48.715-0600 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71518
+2021-02-05T15:00:48.715-0600 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5
+2021-02-05T15:00:48.752-0600 [INFO]  plugin.terraform-provider-aws_v3.20.0_x5: configuring server automatic mTLS: timestamp=2021-02-05T15:00:48.752-0600
+2021-02-05T15:00:48.786-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: plugin address: address=/var/folders/g0/0bn56q_j4wbbq0j7ppz24pw1w01fmm/T/plugin186707285 network=unix timestamp=2021-02-05T15:00:48.786-0600
+2021-02-05T15:00:48.786-0600 [DEBUG] plugin: using plugin: version=5
+2021/02/05 15:00:48 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021-02-05T15:00:48.835-0600 [TRACE] plugin.stdio: waiting for stdio data
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalOpFilter
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalGetProvider
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalValidateProvider
+2021/02/05 15:00:48 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/02/05 15:00:48 [TRACE] GRPCProvider: GetSchema
+2021/02/05 15:00:48 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "aws_instance.pub-ds-client-dev"
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "aws_instance.pub-ds-api-dev"
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-client-dev": starting visit (*terraform.NodeValidatableResource)
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-api-dev": starting visit (*terraform.NodeValidatableResource)
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-client-dev": evaluating
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-api-dev": evaluating
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: aws_instance.pub-ds-client-dev
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: aws_instance.pub-ds-api-dev
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalGetProvider
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalGetProvider
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalValidateResource
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalValidateResource
+2021/02/05 15:00:48 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/02/05 15:00:48 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021-02-05T15:00:48.952-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 2021/02/05 15:00:48 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: aws_instance.pub-ds-client-dev
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-client-dev": visit complete
+2021-02-05T15:00:48.952-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 2021/02/05 15:00:48 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: aws_instance.pub-ds-api-dev
+2021/02/05 15:00:48 [TRACE] vertex "aws_instance.pub-ds-api-dev": visit complete
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:00:48 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/02/05 15:00:48 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalCloseProvider
+2021/02/05 15:00:48 [TRACE] GRPCProvider: Close
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2021/02/05 15:00:48 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-02-05T15:00:48.953-0600 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-02-05T15:00:48.957-0600 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71518
+2021-02-05T15:00:48.957-0600 [DEBUG] plugin: plugin exited
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2021/02/05 15:00:48 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "root"
+2021/02/05 15:00:48 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/02/05 15:00:48 [TRACE] vertex "root": evaluating
+2021/02/05 15:00:48 [TRACE] [walkValidate] Entering eval tree: root
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] [walkValidate] Exiting eval tree: root
+2021/02/05 15:00:48 [TRACE] vertex "root": visit complete
+2021/02/05 15:00:48 [INFO] backend/local: apply calling Refresh
+2021/02/05 15:00:48 [INFO] terraform: building graph: GraphTypeRefresh
+2021/02/05 15:00:48 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/02/05 15:00:48 [TRACE] ConfigTransformer: Starting for path: 
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/02/05 15:00:48 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/05 15:00:48 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from pub-dspace.tf:1,1-15
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/05 15:00:48 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  root - *terraform.nodeCloseModule
+  ------
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2021/02/05 15:00:48 [DEBUG] Starting graph walk: walkRefresh
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "root"
+2021/02/05 15:00:48 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/02/05 15:00:48 [TRACE] vertex "root": evaluating
+2021/02/05 15:00:48 [TRACE] [walkRefresh] Entering eval tree: root
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] [walkRefresh] Exiting eval tree: root
+2021/02/05 15:00:48 [TRACE] vertex "root": visit complete
+2021/02/05 15:00:48 [INFO] backend/local: apply calling Plan
+2021/02/05 15:00:48 [INFO] terraform: building graph: GraphTypePlanDestroy
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/02/05 15:00:48 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/05 15:00:48 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from pub-dspace.tf:1,1-15
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/05 15:00:48 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  ------
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/05 15:00:48 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/05 15:00:48 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/05 15:00:48 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  root - *terraform.nodeCloseModule
+  ------
+2021/02/05 15:00:48 [DEBUG] Starting graph walk: walkPlanDestroy
+2021/02/05 15:00:48 [TRACE] dag/walk: visiting "root"
+2021/02/05 15:00:48 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/02/05 15:00:48 [TRACE] vertex "root": evaluating
+2021/02/05 15:00:48 [TRACE] [walkPlanDestroy] Entering eval tree: root
+2021/02/05 15:00:48 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:48 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:48 [TRACE] [walkPlanDestroy] Exiting eval tree: root
+2021/02/05 15:00:48 [TRACE] vertex "root": visit complete
+2021/02/05 15:00:48 [DEBUG] command: asking for input: "Do you really want to destroy all resources?"
+2021/02/05 15:00:51 [INFO] backend/local: apply calling Apply
+2021/02/05 15:00:51 [INFO] terraform: building graph: GraphTypeApply
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/02/05 15:00:51 [TRACE] ConfigTransformer: Starting for path: 
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.pub-ds-api-dev (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.pub-ds-client-dev (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.DiffTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.DiffTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/02/05 15:00:51 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.pub-ds-client-dev (expand)" (*terraform.nodeExpandApplyableResource) config from pub-dspace.tf:18,1-44
+2021/02/05 15:00:51 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.pub-ds-client-dev (expand)
+2021/02/05 15:00:51 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.pub-ds-api-dev (expand)" (*terraform.nodeExpandApplyableResource) config from pub-dspace.tf:6,1-41
+2021/02/05 15:00:51 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.pub-ds-api-dev (expand)
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/02/05 15:00:51 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from pub-dspace.tf:1,1-15
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.pub-ds-api-dev (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.pub-ds-client-dev (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/02/05 15:00:51 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.pub-ds-api-dev (expand)
+2021/02/05 15:00:51 [DEBUG] ProviderTransformer: "aws_instance.pub-ds-api-dev (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:51 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.pub-ds-client-dev (expand)
+2021/02/05 15:00:51 [DEBUG] ProviderTransformer: "aws_instance.pub-ds-client-dev (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.pub-ds-api-dev (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/02/05 15:00:51 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.pub-ds-api-dev (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.pub-ds-client-dev (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/02/05 15:00:51 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.pub-ds-client-dev (expand)
+2021/02/05 15:00:51 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:51 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.pub-ds-api-dev (expand)
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/02/05 15:00:51 [DEBUG] ReferenceTransformer: "aws_instance.pub-ds-api-dev (expand)" references: []
+2021/02/05 15:00:51 [DEBUG] ReferenceTransformer: "aws_instance.pub-ds-client-dev (expand)" references: []
+2021/02/05 15:00:51 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.destroyRootOutputTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.destroyRootOutputTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2021/02/05 15:00:51 [DEBUG] pruneUnusedNodes: aws_instance.pub-ds-api-dev (expand) is no longer needed, removing
+2021/02/05 15:00:51 [DEBUG] pruneUnusedNodes: aws_instance.pub-ds-client-dev (expand) is no longer needed, removing
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer with new graph:
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.applyDestroyNodeReferenceFixupTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.applyDestroyNodeReferenceFixupTransformer (no changes)
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2021/02/05 15:00:51 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/02/05 15:00:51 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2021/02/05 15:00:51 [DEBUG] Starting graph walk: walkDestroy
+2021/02/05 15:00:51 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:00:51 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/02/05 15:00:51 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2021/02/05 15:00:51 [TRACE] [walkDestroy] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalInitProvider
+2021-02-05T15:00:51.250-0600 [INFO]  plugin: configuring client automatic mTLS
+2021-02-05T15:00:51.279-0600 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5]
+2021-02-05T15:00:51.290-0600 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71523
+2021-02-05T15:00:51.290-0600 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5
+2021-02-05T15:00:51.328-0600 [INFO]  plugin.terraform-provider-aws_v3.20.0_x5: configuring server automatic mTLS: timestamp=2021-02-05T15:00:51.328-0600
+2021-02-05T15:00:51.356-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: plugin address: address=/var/folders/g0/0bn56q_j4wbbq0j7ppz24pw1w01fmm/T/plugin054580942 network=unix timestamp=2021-02-05T15:00:51.356-0600
+2021-02-05T15:00:51.356-0600 [DEBUG] plugin: using plugin: version=5
+2021/02/05 15:00:51 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:00:51 [TRACE] eval: terraform.EvalNoop
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalOpFilter
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalGetProvider
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalOpFilter
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalSequence
+2021/02/05 15:00:51 [TRACE] eval: *terraform.EvalConfigProvider
+2021-02-05T15:00:51.405-0600 [TRACE] plugin.stdio: waiting for stdio data
+2021/02/05 15:00:51 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/02/05 15:00:51 [TRACE] GRPCProvider: GetSchema
+2021/02/05 15:00:51 [TRACE] GRPCProvider: Configure
+2021-02-05T15:00:51.461-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 2021/02/05 15:00:51 [INFO] AWS Auth provider used: "EnvProvider"
+2021-02-05T15:00:51.462-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 2021/02/05 15:00:51 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2021/02/05 15:00:56 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:00:56 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:00:56 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:01 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:01 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:01 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:06 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:06 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:06 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:11 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:11 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:11 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:16 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:16 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:16 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:21 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:21 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:21 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:26 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:26 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:26 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:31 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/02/05 15:01:31 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:31 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/02/05 15:01:32 [TRACE] backend/local: waiting for the running operation to stop
+2021/02/05 15:01:32 [WARN] terraform: Stop called, initiating interrupt sequence
+2021/02/05 15:01:32 [WARN] terraform: run context exists, stopping
+2021/02/05 15:01:32 [INFO] terraform: waiting for graceful stop to complete
+2021-02-05T15:01:32.890-0600 [TRACE] plugin.terraform-provider-aws_v3.20.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2021-02-05T15:01:32.889-0600
+2021/02/05 15:01:32 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2021/02/05 15:01:32 [TRACE] GRPCProvider: Stop
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: panic: close of nil channel
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: goroutine 164 [running]:
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc0019c0d60)
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc0019c0d60, 0x7b42700, 0xc001272fc0, 0xc001272ff0, 0xc0019c0d60, 0xc001272fc0, 0xc001d7eba0)
+2021-02-05T15:01:32.894-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa1
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x6d5da40, 0xc0019c0d60, 0x7b42700, 0xc001272fc0, 0xc000daa4e0, 0x0, 0x7b42700, 0xc001272fc0, 0x0, 0x0)
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x217
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000024a80, 0x7b677a0, 0xc00054e300, 0xc001920800, 0xc000cedb30, 0xb3a80e8, 0x0, 0x0, 0x0)
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x50a
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000024a80, 0x7b677a0, 0xc00054e300, 0xc001920800, 0x0)
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xcfd
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc0005329d0, 0xc000024a80, 0x7b677a0, 0xc00054e300, 0xc001920800)
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa1
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-02-05T15:01:32.895-0600 [DEBUG] plugin.terraform-provider-aws_v3.20.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x204
+2021-02-05T15:01:32.899-0600 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-02-05T15:01:32.899-0600 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.20.0/darwin_amd64/terraform-provider-aws_v3.20.0_x5 pid=71523 error="exit status 2"
+2021/02/05 15:01:32 [ERROR] eval: *terraform.EvalConfigProvider, err: rpc error: code = Unavailable desc = transport is closing
+2021/02/05 15:01:32 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2021/02/05 15:01:32 [ERROR] eval: *terraform.EvalOpFilter, err: rpc error: code = Unavailable desc = transport is closing
+2021/02/05 15:01:32 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2021/02/05 15:01:32 [TRACE] [walkDestroy] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2021/02/05 15:01:32 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/02/05 15:01:32 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2021/02/05 15:01:32 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021/02/05 15:01:32 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021/02/05 15:01:32 [TRACE] backend/local: graceful stop has completed
+2021/02/05 15:01:32 [WARN] terraform: stop complete
+2021/02/05 15:01:32 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2021/02/05 15:01:32 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2021/02/05 15:01:32 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021/02/05 15:01:32 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2021/02/05 15:01:32 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2021-02-05T15:01:32.930-0600 [DEBUG] plugin: plugin exited
