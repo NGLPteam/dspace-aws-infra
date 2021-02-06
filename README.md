@@ -49,7 +49,8 @@ To confirm things are working, run this command from the dspace-aws-testing/ansi
 
 output will look like this, if you've run the terraform plan file:
 
-`@all:
+```
+@all:
   |--@arch_x86_64:
   |  |--pub-ds-api
   |  |--pub-ds-client
@@ -64,4 +65,4 @@ output will look like this, if you've run the terraform plan file:
   |  |--pub-ds-api
   |  |--pub-ds-client
   |--@ungrouped:
- `
+```
