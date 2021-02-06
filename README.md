@@ -6,13 +6,15 @@ Here are our rough notes so far:
 
 ## Terraform stuff
 
-You need an .aws/credentials file, and also the same information exported as ENV variables. You get the credentials from your AWS SSO login, click on AWS Account, CDL Sandbox, Command line or programatic access, and copy/paste credentials to ~/.aws/credentials AND to your bash config files (I have a ~/.creds.env file I source from ~/.bashrc with the following:
+You need an `.aws/credentials` file, and also the same information exported as ENV variables. You get the credentials from your AWS SSO login, click on AWS Account, CDL Sandbox, Command line or programatic access, and copy/paste credentials to `~/.aws/credentials` AND to your bash config files (I have a `~/.creds.env` file I source from `~/.bashrc` with the following:
 
 `if [[ -r "${HOME}/.creds.env" ]]; then
      source "${HOME}/.creds.env"
 fi`
 
 AWS CLI works with the .aws/credentials file, as do a few other tools, but Ansible and Terraform both seem to prefer the environment variables.
+
+> :warning: You'll need to repeat those credential-copying steps every day you work with these scripts. They are time-limited and will only last a day.
 
 Be sure to not commit the `.creds.env` file to any GitHub repository, or hilarity will ensue.
 
