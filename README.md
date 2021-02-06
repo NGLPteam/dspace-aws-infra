@@ -16,7 +16,7 @@ AWS CLI works with the .aws/credentials file, as do a few other tools, but Ansib
 
 > :warning: You'll need to repeat those credential-copying steps every day you work with these scripts. They are time-limited and will only last a day.
 
-Be sure to not commit the `.creds.env` file to any GitHub repository, or hilarity will ensue.
+> :warning: Be sure to never commit anything like a `.creds.env` file to any GitHub repository, or hilarity will ensue.
 
 To run the terraform plan file, in the dspace-aws-testing/terraform folder, run:
 
