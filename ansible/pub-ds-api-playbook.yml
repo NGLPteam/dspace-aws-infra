@@ -14,7 +14,7 @@
       - solr_use_java_version_8: False
       - solr_local_keystore: False
       - solr_ssl_configure: False
-
+      - solr_user: solr
       - ansible_remote_tmp: /tmp
 
 # FIXME: the Solr role fails on the first try, works on the second, is probably a permissions thing, fix it
@@ -39,9 +39,10 @@
 
     roles:
     - role: make_service_user
-# - role: copy_installers
     - role: install_java
     - role: set_up_code
     - role: gantsign.maven
     - role: zaxos.tomcat-ansible-role
     - role: lean_delivery.solr_standalone
+    - role: detail_oriented
+

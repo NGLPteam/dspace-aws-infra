@@ -1,0 +1,14 @@
+---
+
+- name: add service user to the tomcat and solr groups
+  user:
+    name: '{{ service_user_name }}'
+    groups: solr,tomcat
+    state: present
+
+- name: ensure the service user home folder has the correct permissions (because I dunno gremlins I guess)
+  file:
+    path: '/home/{{ service_user_name }}'
+    owner: '{{ service_user_name }}'
+    group: '{{ service_user_name }}'
+    mode: 01770
