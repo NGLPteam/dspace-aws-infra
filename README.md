@@ -68,3 +68,6 @@ output will look like this, if you've run the terraform plan file:
   |  |--pub-ds-client
   |--@ungrouped:
 ```
+## License
+
+[MIT](LICENSE)
