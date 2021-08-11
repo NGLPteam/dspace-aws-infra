@@ -1,4 +1,4 @@
-# dspace-aws-testing
+# dspace-aws-infra
 
 A work in progress, a collection of Terraform and Ansible configurations for standing up DSpace7 in AWS.
 
