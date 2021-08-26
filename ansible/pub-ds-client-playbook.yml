@@ -6,10 +6,14 @@
     become_user: root
 
     vars:
-      nvm_node_version: "10.23.0"
+      nvm_node_version: "12.21.0"
       nvm_install_globally:
         - name: yarn
           version: 1.22.5
+      code_git_repo: https://github.com/eScholarship/dspace-angular.git
+      code_source_dir: /home/eschol/dspace-angular
+      code_git_branch: eschol-ds7-pilot
+      code_service_user: eschol
 
     tasks:
       - name: latest version of all required packages installed
@@ -19,5 +23,8 @@
           state: latest
 
     roles:
+    - role: make_service_user
     - role: grzegorznowak.nvm_node
+    - role: make_service_user
+    - role: set_up_code
 
