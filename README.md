@@ -6,7 +6,7 @@ Here are our rough notes so far:
 
 ## Terraform stuff
 
-You need an `.aws/credentials` file, and also the same information exported as ENV variables. You get the credentials from your AWS SSO login, click on AWS Account, CDL Sandbox, Command line or programatic access, and copy/paste credentials to `~/.aws/credentials` AND to your bash config files (I have a `~/.creds.env` file I source from `~/.bashrc` with the following:
+You need an `.aws/credentials` file, and also the same information exported as ENV variables. You get the credentials from your AWS SSO login, click on _AWS Account_, your role name, _Command line or programatic access_, and copy/paste credentials to `~/.aws/credentials` AND to your bash config files (I have a `~/.creds.env` file I source from `~/.bashrc` with the following:
 
 `if [[ -r "${HOME}/.creds.env" ]]; then
      source "${HOME}/.creds.env"
